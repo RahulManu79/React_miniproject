@@ -1,4 +1,5 @@
 const express = require('express')
+var cors = require('cors')  //use this
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const app = express()
@@ -10,7 +11,7 @@ const adminRoute = require("./routes/adminRoutes")
 
 
 
-
+app.use(cors()) 
 app.use('/api/user',userRoute)
 app.use('/api/admin',adminRoute)
 app.listen(3001, ()=>{

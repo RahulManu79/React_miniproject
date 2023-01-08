@@ -14,7 +14,7 @@ function Userslist() {
     const getUsersData=async()=>{
         try{
             dispatch(showLoding())
-            const response = await axios.get('/api/admin/get-all-users',{
+            const response = await axios.get('http://localhost:3001/api/admin/get-all-users',{
                 headers:{
                     Authorization:`Bearer ${localStorage.getItem('token')}`
                 }
@@ -34,7 +34,7 @@ function Userslist() {
             const passId = record._id
             console.log(passId);
             dispatch(showLoding())
-            const response = await axios.post("/api/admin/change-user-status", { userIdd: passId },
+            const response = await axios.post("http://localhost:3001/api/admin/change-user-status", { userIdd: passId },
                 {
                     headers: {
                         // Authorization: `Bearer ${localStorage.getItem("token")}`,

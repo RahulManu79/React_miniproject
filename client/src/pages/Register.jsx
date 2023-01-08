@@ -17,7 +17,7 @@ function Register() {
     try {
       dispatch(showLoding())
       
-      const response = await axios.post('/api/user/register',values)
+      const response = await axios.post('http://localhost:3001/api/user/register',values)
       dispatch(hideLoading())
       
       if(response.data.success){
@@ -31,7 +31,7 @@ function Register() {
       }
     } catch (error) {
       dispatch(hideLoading())
-      
+      console.log(error);
       toast.error("something went wrong")
     }
   }

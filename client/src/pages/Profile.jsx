@@ -11,17 +11,17 @@ const Profile = () => {
     const [image, setImage] = useState(null)
     const navigate = useNavigate()
     const { user } = useSelector((state) => state.user);
-    const cloudAPI = 'dcfbzgrgb'
+    const cloudAPI = 'dgysrrvk2'
     const uploadProfile =async () => {
         const formData = new FormData();
         formData.append('file', image);
-        formData.append('upload_preset', 'ureaug60');
+        formData.append('upload_preset', 'tnlhpsik');
         console.log(formData);
         let imageUrl = null
        await axios.post(`https://api.cloudinary.com/v1_1/${cloudAPI}/image/upload`, formData).then(async(response) => {
             console.log(response.data.secure_url);
             const imageUrl=response.data.secure_url
-            const response1 = await axios.post("/api/user/update-profile", {imageUpdate:imageUrl},
+            const response1 = await axios.post("http://localhost:3001/api/user/update-profile", {imageUpdate:imageUrl},
                 {
                     headers: {
                       

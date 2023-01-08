@@ -16,7 +16,7 @@ function Login() {
   const onFinish= async(values) =>{
     try {
       dispatch(showLoding())
-      const response = await axios.post('/api/user/login',values)
+      const response = await axios.post('http://localhost:3001/api/user/login',values)
       dispatch(hideLoading())
       
       if(response.data.success){
