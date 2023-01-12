@@ -53,6 +53,7 @@
   .menu {
     margin-top: 80px;
     padding: 0 10px;
+    display: flex;
   }
   .menu-item {
     margin-top: 30px;
@@ -85,7 +86,9 @@
     cursor: pointer;
     padding-left: 10px;
   }
-  
+  .anchor{
+    margin-right: 40px;
+  }
   
   
   /* @media screen and (max-width:768px){

@@ -12,6 +12,7 @@ import PublicRoute from "./components/PublicRoute";
 import Userslist from "./pages/Admin/usersList";
 import Profile from "./pages/Profile";
 
+import "./App.css";
 function App() {
   const { loading } = useSelector((state) => state.alerts);
   return (
